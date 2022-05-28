@@ -11,12 +11,22 @@ console.log(myName)
 
 //Define a function `getVowelCount()`
 
-
-
+function getVowelCount(aString) {
+    let lowerCaseString = aString.toLowerCase();
+    let modifiedString = lowerCaseString.replaceAll("a","").
+    replaceAll("e","").
+    replaceAll("i","").
+    replaceAll("o","").
+    replaceAll("u","").
+    replaceAll("y","");
+    let numVowel = (lowerCaseString.length - modifiedString.length);
+    return numVowel
+}
 
 //Define a variable `numVowelsInName` and log it out
 
-
+let numVowelsInName = getVowelCount(myName)
+console.log(numVowelsInName)
 
 
 //Create a variable `h1Elememt` that refers to the `<h1>` element in the DOM.
